@@ -1,0 +1,715 @@
+/* =====================================================
+   PREMIUM DIGITAL LIBRARY
+   Black Crystal / Glass UI
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+
+    padding: 45px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+
+    color: #f5f5f5;
+
+    background:
+        radial-gradient(
+            circle at 50% -20%,
+            rgba(255, 255, 255, 0.09),
+            transparent 45%
+        ),
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(255, 255, 255, 0.035),
+            transparent 35%
+        ),
+        #050505;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+h1 {
+    margin-bottom: 38px;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================================
+   GLASS FORM
+===================================================== */
+
+form {
+    width: min(1050px, 95%);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+
+/* =====================================================
+   INPUT GROUPS
+===================================================== */
+
+.book-title,
+.book-author,
+.book-pages {
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.book-title label,
+.book-author label,
+.book-pages label {
+    color: #a8a8a8;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.book-title input,
+.book-author input,
+.book-pages input {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.book-title input::placeholder,
+.book-author input::placeholder,
+.book-pages input::placeholder {
+    color: #555;
+}
+
+
+.book-title input:hover,
+.book-author input:hover,
+.book-pages input:hover {
+    border-color: rgba(255, 255, 255, 0.22);
+}
+
+
+.book-title input:focus,
+.book-author input:focus,
+.book-pages input:focus {
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border-color: rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.045),
+        0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+
+/* =====================================================
+   BUTTON CONTAINER
+===================================================== */
+
+.btn-container {
+    flex-basis: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================================
+   PREMIUM DIGITAL SUBMIT BUTTON
+===================================================== */
+
+#submit {
+
+    position: relative;
+
+    width: 155px;
+    height: 46px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 8px;
+
+    color: #050505;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* DIGITAL LIGHT SWEEP */
+
+#submit::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.5s ease;
+}
+
+
+#submit:hover::before {
+    left: 140%;
+}
+
+
+#submit:hover {
+
+    background: #e8e8e8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(255, 255, 255, 0.10);
+}
+
+
+#submit:active {
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   LIBRARY STATISTICS
+===================================================== */
+
+.library-stats {
+
+    width: min(1050px, 95%);
+
+    margin: 32px auto 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 70px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.library-stats p {
+    color: #777;
+}
+
+
+.library-stats strong {
+    margin-left: 5px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   LIBRARY GRID
+===================================================== */
+
+#library {
+
+    width: min(1050px, 95%);
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   PREMIUM BOOK CARD
+===================================================== */
+
+.book-card {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 14px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* TOP DIGITAL LINE */
+
+.book-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 20px;
+    right: 20px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+}
+
+
+.book-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.55),
+        0 0 25px rgba(255, 255, 255, 0.025);
+}
+
+
+/* =====================================================
+   BOOK INFORMATION
+===================================================== */
+
+.book-card h3 {
+
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+
+.book-card p {
+
+    color: #858585;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOOK ACTIONS
+===================================================== */
+
+.book-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.book-actions button {
+
+    position: relative;
+
+    flex: 1;
+
+    height: 38px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================================
+   READ BUTTON
+===================================================== */
+
+.read-btn {
+
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+
+.read-btn:hover {
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 18px rgba(255, 255, 255, 0.06);
+}
+
+
+.read-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =====================================================
+   DELETE BUTTON
+===================================================== */
+
+.delete-btn {
+
+    color: #ff8b8b;
+
+    background: rgba(255, 70, 70, 0.055);
+
+    border: 1px solid rgba(255, 70, 70, 0.15);
+}
+
+
+.delete-btn:hover {
+
+    color: #ffffff;
+
+    background: rgba(255, 70, 70, 0.16);
+
+    border-color: rgba(255, 80, 80, 0.30);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 18px rgba(255, 50, 50, 0.08);
+}
+
+
+.delete-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+
+    width: 100%;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    color: #555;
+
+    font-size: 14px;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    margin-top: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+.github-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.github-link img {
+
+    width: 20px;
+    height: 20px;
+
+    filter: invert(1);
+
+    opacity: 0.7;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.github-link:hover {
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.github-link:hover img {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 14px;
+    }
+
+    h1 {
+        margin-bottom: 28px;
+    }
+
+    form {
+        width: 100%;
+        padding: 24px 18px;
+    }
+
+    .book-title,
+    .book-author,
+    .book-pages {
+        width: 100%;
+    }
+
+    .library-stats {
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+
+        text-align: center;
+    }
+
+    #library {
+
+        width: 100%;
+
+        grid-template-columns: 1fr;
+    }
+
+    .book-card {
+        padding: 21px;
+    }
+}

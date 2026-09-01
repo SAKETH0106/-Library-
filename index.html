@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Book Library</h1>
+    </header>
+    <main>
+        <form >
+            <div class="book-title">
+                <label for="title">Book</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="book-author">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+
+            <div class="book-pages">
+                <label for="pages">Pages</label>
+                <input type="number" id="pages" name="pages" required>
+            </div>
+            <div class="btn-container">
+                <button type="submit" id="submit">Add Book</button>
+            </div>
+        </form>
+        <div class="library-stats">
+            <p>Total Books: <strong id="book-count">0</strong></p>
+            <p>Books Read: <strong id="read-count">0</strong></p>
+        </div>
+
+        <div id="library"></div>
+    </main>
+
+     <footer>
+    <p>© 2026 saketh 0106</p>
+
+    <a href="https://github.com/SAKETH0106"
+       target="_blank"
+       class="github-link">
+
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        alt="GitHub">GitHub
+    </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
